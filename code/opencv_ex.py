@@ -1,7 +1,7 @@
 import cv2 as cv
 import sys
 
-img = cv.imread('C:\\Users\\win\\Documents\\GitHub\\DAU-Computer-Vision\\data\\soccer.jpg')
+img = cv.imread('your file path')
 
 # 지정된 경로의 이미지를 잘 읽었는지 확인
 if img is None:
@@ -23,8 +23,8 @@ def grayNresize(img):
     # 명암 영상 사이즈 축소(1/2배 축소)
     gray_small = cv.resize(gray_scale, dsize=(0,0), fx=0.5, fy=0.5)
     #각각 저장
-    cv.imwrite('C:\\Users\\win\\Documents\\GitHub\\DAU-Computer-Vision\\data\\soccer_gray.jpg', gray_scale)
-    cv.imwrite('C:\\Users\\win\\Documents\\GitHub\\DAU-Computer-Vision\\data\\soccer_gray_small.jpg', gray_small)
+    cv.imwrite('your file path', gray_scale)
+    cv.imwrite('your file path', gray_small)
 
     cv.imshow('Color image', img)
     cv.imshow('Gray image', gray_scale)
