@@ -4,7 +4,7 @@ from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input, d
 
 model = ResNet50(weights='imagenet')
 
-img = cv.imread('rabbit.jpg')
+img = cv.imread('C:\\Users\\ewqds\\Documents\\GitHub\\DAU-Computer-Vision\\code\\ResNet50\\rabbit.jpg')
 x=np.reshape(cv.resize(img, (224,224)), (1,224,224,3))
 x=preprocess_input(x)
 
