@@ -26,4 +26,27 @@ print('정확률=', cnn.evaluate(test_ds,verbose=0)[1]*100)
 
 cnn.save('cnn_for_stanford_dogs.h5')
 
+import pickle
+f=open('dog_species_names.txt', 'wb')
+pickle.dump(train_ds.class_names,f)
+f.close()
+
+import matplotlib.pyplot as plt
+plt.plot(hist.history['accuracy'])
+plt.plot(hist.history['val_accuracy'])
+plt.title('Accuracy graph')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train','Validation'])
+plt.grid()
+plt.show()
+
+plt.plot(hist.history['loss'])
+plt.plot(hist.history['val_loss'])
+plt.title('loss graph')
+plt.ylabel('loss')
+plt.xlabel('Epoch')
+plt.legend(['Train','Validation'])
+plt.grid()
+plt.show()
 
