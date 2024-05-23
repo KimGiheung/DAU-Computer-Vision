@@ -5,7 +5,7 @@ from tensorflow.keras.applications.densenet import DenseNet121
 from tensorflow.keras.utils import image_dataset_from_directory
 import pathlib
 
-data_path=pathlib.Path('C:\\Users\\ewqds\\Documents\\GitHub\\DAU-Computer-Vision\\code\\ResNet50')
+data_path=pathlib.Path('C:\\Users\\ewqds\\Documents\\GitHub\\DAU-Computer-Vision\\code\\DenseNet121\\images\\Images')
 
 train_ds=image_dataset_from_directory(data_path,validation_split=0.2,subset='training', seed=123, image_size=(224,224), batch_size=16)
 test_ds=image_dataset_from_directory(data_path,validation_split=0.2,subset='validation',seed=123,image_size=(224,224), batch_size=16)
@@ -15,7 +15,7 @@ cnn=Sequential()
 cnn.add(Rescaling(1.0/255.0))
 cnn.add(base_model)
 cnn.add(Flatten())
-cnn.add(Dense(1024,acrivation='relu'))
+cnn.add(Dense(1024,activation='relu'))
 cnn.add(Dropout(0.75))
 cnn.add(Dense(units=120, activation='softmax'))
 
