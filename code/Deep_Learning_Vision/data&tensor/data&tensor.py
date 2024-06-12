@@ -7,6 +7,7 @@ print(x_train.shape, y_train.shape, x_test.shape, y_test.shape)
 plt.figure(figsize=(24,3))
 plt.suptitle('MNIST', fontsize=30)
 for i in range(10):
+    #subplot(행 개수, 열 개수, 번째)
     plt.subplot(1, 10, i+1)
     plt.imshow(x_train[i], cmap='gray')
     plt.xticks([]); plt.yticks([])
