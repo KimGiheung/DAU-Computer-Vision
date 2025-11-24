@@ -55,24 +55,6 @@ DAU-Computer-Vision/
 
 ---
 
-## 📅 Schedule
-
-| Week   | Topic               | Deadline   |
-| ------ | ------------------- | ---------- |
-| Week 1 | Sorting             | 2025-04-01 |
-| Week 2 | Graph Traversal     | 2025-04-08 |
-| Week 3 | Dynamic Programming | 2025-04-15 |
-
----
-
-## 👥 Members
-
-* Giheung Kim (AI Major)
-* Member 2
-* Member 3
-
----
-
 ## 📎 References
 
 * Dong-A Univ CompueterVision Lecture Materials
